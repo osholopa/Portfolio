@@ -1,0 +1,108 @@
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0.25;
+        border-radius: 50%;
+    }
+}
+
+.background {
+    z-index: -1;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #e8e8e8;
+    overflow: hidden;
+}
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(172, 169, 169, 0.2);
+    animation: animate 19s linear infinite;
+}
+
+
+
+
+.background li:nth-child(0) {
+    left: 58%;
+    width: 134px;
+    height: 134px;
+    bottom: -134px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 2%;
+    width: 190px;
+    height: 190px;
+    bottom: -190px;
+    animation-delay: 4s;
+}
+.background li:nth-child(2) {
+    left: 49%;
+    width: 162px;
+    height: 162px;
+    bottom: -162px;
+    animation-delay: 6s;
+}
+.background li:nth-child(3) {
+    left: 47%;
+    width: 187px;
+    height: 187px;
+    bottom: -187px;
+    animation-delay: 12s;
+}
+.background li:nth-child(4) {
+    left: 66%;
+    width: 169px;
+    height: 169px;
+    bottom: -169px;
+    animation-delay: 12s;
+}
+.background li:nth-child(5) {
+    left: 19%;
+    width: 175px;
+    height: 175px;
+    bottom: -175px;
+    animation-delay: 13s;
+}
+.background li:nth-child(6) {
+    left: 45%;
+    width: 183px;
+    height: 183px;
+    bottom: -183px;
+    animation-delay: 25s;
+}
+.background li:nth-child(7) {
+    left: 38%;
+    width: 136px;
+    height: 136px;
+    bottom: -136px;
+    animation-delay: 7s;
+}
+.background li:nth-child(8) {
+    left: 16%;
+    width: 163px;
+    height: 163px;
+    bottom: -163px;
+    animation-delay: 32s;
+}
+.background li:nth-child(9) {
+    left: 66%;
+    width: 106px;
+    height: 106px;
+    bottom: -106px;
+    animation-delay: 31s;
+}
