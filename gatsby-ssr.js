@@ -5,6 +5,7 @@ import {
   PrismicPreviewProvider,
   componentResolverFromMap,
 } from 'gatsby-plugin-prismic-previews'
+import HomeTemplate from './src/pages/index'
 
 export const wrapRootElement = ({ element }) => (
   <PrismicProvider
@@ -17,8 +18,7 @@ export const wrapRootElement = ({ element }) => (
         {
           repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
           componentResolver: componentResolverFromMap({
-            homepage: HomeTemplate,
-            page: PageTemplate,
+            homepage: HomeTemplate
           }),
         },
       ]}
