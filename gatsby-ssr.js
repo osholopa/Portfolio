@@ -16,7 +16,6 @@ export const wrapRootElement = ({ element }) => (
       repositoryConfigs={[
         {
           repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
-          linkResolver,
           componentResolver: componentResolverFromMap({
             homepage: HomeTemplate,
             page: PageTemplate,

@@ -20,8 +20,7 @@ module.exports = {
       resolve: 'gatsby-source-prismic',
       options: {
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
-        customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
-        linkResolver: require('./src/utils/LinkResolver').linkResolver
+        customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN
       },
     },
     'gatsby-plugin-image',
