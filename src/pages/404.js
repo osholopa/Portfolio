@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Layout } from '../components/Layout'
 import { Seo } from '../components/Seo'
+import { withPrismicUnpublishedPreview } from 'gatsby-plugin-prismic-previews'
 
 const NotFoundPage = () => (
   <Layout>
@@ -13,4 +14,4 @@ const NotFoundPage = () => (
   </Layout>
 )
 
-export default NotFoundPage
+export default withPrismicUnpublishedPreview(NotFoundPage)

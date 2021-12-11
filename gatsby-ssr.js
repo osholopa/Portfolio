@@ -8,6 +8,19 @@ export const wrapRootElement = ({ element }) => (
       <Link to={href} {...props} />
     )}
   >
+    <PrismicPreviewProvider
+      repositoryConfigs={[
+        {
+          repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
+          linkResolver,
+          componentResolver: componentResolverFromMap({
+            homepage: HomeTemplate,
+            page: PageTemplate,
+          }),
+        },
+      ]}
+    >
     {element}
+    </PrismicPreviewProvider>
   </PrismicProvider>
 )

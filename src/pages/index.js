@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import { SliceZone } from '@prismicio/react'
+import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
 
 import { Layout } from '../components/Layout'
 import { Seo } from '../components/Seo'
@@ -112,4 +113,4 @@ query MyQuery {
 
 `
 
-export default HomeTemplate
+export default withPrismicPreview(HomeTemplate)
