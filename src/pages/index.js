@@ -4,11 +4,9 @@ import { SliceZone } from '@prismicio/react'
 import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
 
 import { Layout } from '../components/Layout'
-import { Seo } from '../components/Seo'
 import { HomepageBanner } from '../components/HomepageBanner'
 import { components } from '../slices'
 import styled from 'styled-components'
-// import media from '../styles'
 
 const ProjectContainer = styled.div`
   display: flex;
@@ -28,7 +26,6 @@ const HomeTemplate = ({ data }) => {
 
   return (
     <Layout isHomepage>
-      <Seo title="Home" />
       <HomepageBanner
         title={doc.banner_title.text}
         description={doc.banner_description.text}
@@ -45,6 +42,7 @@ const HomeTemplate = ({ data }) => {
 export const query = graphql`
 query MyQuery {
   prismicHomepage {
+    _previewable
     data {
       banner_title {
         text
