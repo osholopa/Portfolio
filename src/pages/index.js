@@ -25,10 +25,9 @@ const Header = styled.h2`
 const HomeTemplate = ({ data }) => {
   if (!data) return null
   const doc = data.prismicHomepage.data
-  const footerData = data.prismicFooter.data
 
   return (
-    <Layout isHomepage footerData={footerData}>
+    <Layout isHomepage>
       <Seo title="Home" />
       <HomepageBanner
         title={doc.banner_title.text}
@@ -92,22 +91,7 @@ query MyQuery {
       }
     }
   }
-  prismicFooter {
-    data {
-      copyright {
-        text
-      }
-      github_link {
-        url
-      }
-      linkedin_link {
-        url
-      }
-      mailto_link {
-        url
-      }
-    }
-  }
+  
 }
 
 

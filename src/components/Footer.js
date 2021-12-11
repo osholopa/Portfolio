@@ -5,6 +5,7 @@ import ButtonLink from './ButtonLink'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { SiGmail } from 'react-icons/si'
 import './Footer.css'
+import { graphql, useStaticQuery } from 'gatsby'
 
 const StyledFooter = styled.footer`
   width: 100%;
@@ -37,7 +38,31 @@ const SomeIcons = styled.div`
   align-items: center;
 `
 
-export default function Footer({ position, data }) {
+export default function Footer({ position }) {
+
+  const data = useStaticQuery(graphql`
+    {
+      prismicFooter {
+        data {
+          copyright {
+            text
+          }
+          github_link {
+            url
+          }
+          linkedin_link {
+            url
+          }
+          mailto_link {
+            url
+          }
+        }
+      }
+    }
+  `)
+
+  if(!data) return null
+
   return (
     <StyledFooter id="contact" position={position}>
       <SomeIcons>
