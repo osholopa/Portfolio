@@ -62,9 +62,9 @@ export default function Footer({ position }) {
   `)
 
   const {data} = queryData.prismicFooter
-  
+
   if(!data) return null
-    console.log(data)
+
     return (
     <StyledFooter id="contact" position={position}>
       <SomeIcons>

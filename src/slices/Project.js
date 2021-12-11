@@ -8,7 +8,7 @@ const ProjectCard = styled.div`
   width: 100%;
   display: flex;
   flex-direction: ${props => props.imageSide === 'left' ? 'row' : 'row-reverse'};
-  ${media.tablet`
+  ${media.mobile`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,6 +19,9 @@ const CardImg = styled.img`
   height: 300px;
   object-fit: cover;
   object-position: top;
+  ${media.mobile`
+    width: 100%;
+  `}
 `
 
 const Button = styled.button`
@@ -31,10 +34,11 @@ const CardContent = styled.div`
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  ${media.mobile`
+  ${media.tablet`
     max-width: 80vw;
   `};
-  ${media.tablet`
+  ${media.mobile`
+    width: 80%;
     max-width: 80vw;
   `};
 `
@@ -61,7 +65,6 @@ const LinkContainer = styled.div`
 `
 
 export const Project = ({ slice }) => {
-  console.log(slice)
   return(
   <section style={{ width: '100%' }}>
     <ProjectCard imageSide={slice.primary.image_side}>
@@ -104,7 +107,7 @@ export const Project = ({ slice }) => {
           <TechContainer>
             {slice.items.map((tech,index) => {
               return (
-                <img key={index} src={tech.optional_icon.url} />
+                <img key={index} src={tech.optional_icon.url} alt=""/>
               )
             })}
           </TechContainer>
