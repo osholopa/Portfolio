@@ -1,6 +1,10 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import { PrismicProvider } from '@prismicio/react'
+import {
+  PrismicPreviewProvider,
+  componentResolverFromMap,
+} from 'gatsby-plugin-prismic-previews'
 
 export const wrapRootElement = ({ element }) => (
   <PrismicProvider
