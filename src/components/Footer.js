@@ -40,7 +40,7 @@ const SomeIcons = styled.div`
 
 export default function Footer({ position }) {
 
-  const data = useStaticQuery(graphql`
+  const queryData = useStaticQuery(graphql`
     {
       prismicFooter {
         data {
@@ -61,9 +61,11 @@ export default function Footer({ position }) {
     }
   `)
 
+  const {data} = queryData.prismicFooter
+  
   if(!data) return null
-
-  return (
+    console.log(data)
+    return (
     <StyledFooter id="contact" position={position}>
       <SomeIcons>
         <ButtonLink
