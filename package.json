@@ -4,7 +4,7 @@
   "dependencies": {
     "@nfront/global-styles": "^1.2.1",
     "@prismicio/react": "^2.0.0",
-    "gatsby": "^4.3.0",
+    "gatsby": "4.0.0",
     "gatsby-plugin-global-styles": "^1.0.17",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^2.3.0",
