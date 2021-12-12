@@ -26,18 +26,6 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-global-styles`,
-      options: {
-        pathToConfigModule: `src/styles/GlobalStyleComponent`,
-        props: {
-          theme: `src/styles/theme`,
-          other: {
-            light: true,
-          },
-        },
-      },
-    },
-    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/images/favicon.png',

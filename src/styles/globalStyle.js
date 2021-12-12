@@ -1,7 +1,7 @@
-import { css } from '@nfront/global-styles'
+import { createGlobalStyle } from 'styled-components'
 import media from './index'
 
-const globalStyles = css`
+const GlobalStyle = createGlobalStyle`
   ${media.small`
     html {
       font-size: 16px;
@@ -55,4 +55,4 @@ const globalStyles = css`
   }
 `
 
-export default globalStyles
+export default GlobalStyle
