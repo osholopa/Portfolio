@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import media from '../styles'
 
 const ProjectCard = styled.div`
-  // margin: 0.5rem auto;
   width: 100%;
   display: flex;
   flex-direction: ${props => props.imageSide === 'left' ? 'row' : 'row-reverse'};
