@@ -63,6 +63,11 @@ const LinkContainer = styled.div`
   `};
 `
 
+const TechIcon = styled.img`
+  margin-left: 4px;
+  margin-right: 4px;
+`
+
 export const Project = ({ slice }) => {
   return(
   <section style={{ width: '100%' }}>
@@ -106,7 +111,7 @@ export const Project = ({ slice }) => {
           <TechContainer>
             {slice.items.map((tech,index) => {
               return (
-                <img key={index} src={tech.optional_icon.url} alt=""/>
+                <TechIcon key={index} src={tech.optional_icon.url} alt=""/>
               )
             })}
           </TechContainer>

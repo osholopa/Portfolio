@@ -8,6 +8,9 @@ module.exports = {
     description: 'Devops minded software developer skilled in React, Typescript, API Development and much more. Professional musician and awarded cellist.',
   },
   plugins: [
+    'gatsby-plugin-image',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-prismic-previews',
       options: {
@@ -21,8 +24,6 @@ module.exports = {
         customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN
       },
     },
-    'gatsby-plugin-image',
-    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
